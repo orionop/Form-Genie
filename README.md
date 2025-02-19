@@ -1,7 +1,7 @@
 # 🧞‍♂️ Form Genie - AI-Powered Google Forms Auto-Responder  
 
 ## 🚀 Overview  
-**Form Genie** is a **Google Chrome extension** that uses **AI )** to automatically fill Google Forms with intelligent responses. It helps save time by generating answers based on the form's questions.  
+**Form Genie** is a **Google Chrome extension** that uses **AI** to automatically fill Google Forms with intelligent responses. It helps save time by generating answers based on the form's questions.  
 
 ## 🎯 Features  
 ✅ AI-generated responses for text-based questions  
