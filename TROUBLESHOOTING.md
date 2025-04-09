@@ -2,6 +2,32 @@
 
 This guide will help you resolve common issues with the Form Genie extension.
 
+## "No questions found on this form" Error
+
+If you receive this error after clicking the "Start Auto-Fill" button:
+
+1. **Refresh the Form Page**
+   - Sometimes Google Forms may not fully load all elements when you first open it
+   - Try refreshing the page (F5) and then using Form Genie again
+
+2. **Use the Debug Tools**
+   - Click "Show Debug Info" in the Form Genie popup
+   - Click "Run Form Diagnostics" to check if Form Genie can detect form elements
+   - This will help identify if the problem is with element detection
+
+3. **Check Form Structure**
+   - Make sure you're on a standard Google Form
+   - Form Genie works best with standard Google Forms question types
+   - Complex or heavily customized forms may not be detected correctly
+
+4. **Try in Incognito Mode**
+   - Other extensions might interfere with Form Genie
+   - Try using Form Genie in an incognito window with only this extension enabled
+
+5. **Check for iFrames**
+   - Some forms are embedded in iFrames, which Form Genie may not be able to access
+   - Try opening the form directly in a new tab
+
 ## Extension Not Loading
 
 If you see an error like "Manifest file is missing or unreadable" when trying to load the extension:
@@ -56,6 +82,23 @@ If the extension's popup or options page doesn't look right:
    - Open `src/html/popup.html` and `src/html/options.html` in a text editor
    - Make sure they're valid HTML files
    - Verify that they're referencing the correct CSS and JavaScript files
+
+## API Key Issues
+
+If you're having problems with your OpenAI API key:
+
+1. **Verify API Key Format**
+   - OpenAI API keys start with "sk-" followed by a long string of characters
+   - Make sure you've copied the entire key without any extra spaces
+
+2. **Check API Key Status**
+   - Log in to your OpenAI account at https://platform.openai.com/
+   - Check if your API key is active and has sufficient credits
+   - You may need to add a payment method if you've exceeded the free tier
+
+3. **Try a New API Key**
+   - You can create a new API key in your OpenAI account
+   - Use the new key in Form Genie's settings
 
 ## Still Having Issues?
 
