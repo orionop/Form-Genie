@@ -22,15 +22,22 @@ A Chrome extension that uses OpenAI's GPT-3.5 to automatically fill Google Forms
 
 ### Manual Installation (Developer Mode)
 
-1. Clone this repository:
+1. Download or clone this repository:
    ```
    git clone https://github.com/orionop/Form-Genie.git
    ```
 
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top-right corner
-4. Click "Load unpacked" and select the Form Genie directory
-5. The extension should now be installed and visible in your Chrome toolbar
+2. Run the verification script to ensure all files are present:
+   ```
+   node verify_extension.js
+   ```
+
+3. Open Chrome and navigate to `chrome://extensions/`
+4. Enable "Developer mode" in the top-right corner
+5. Click "Load unpacked" and select the Form Genie directory
+6. The extension should now be installed and visible in your Chrome toolbar
+
+For detailed installation instructions with screenshots, open the `load_extension.html` file in your browser.
 
 ## Configuration
 
@@ -75,9 +82,40 @@ Form Genie:
 
 ## Troubleshooting
 
-- **Extension not working?** Make sure you're on a Google Form page and have set up your OpenAI API key.
-- **API errors?** Check that your OpenAI API key is valid and has sufficient credits.
-- **Form not being filled correctly?** Some complex forms may not be fully compatible. Try refreshing the page and trying again.
+If you're experiencing issues with the extension, try these steps:
+
+1. Verify all required files are present by running `node verify_extension.js`
+2. Check that your OpenAI API key is valid and has sufficient credits
+3. Make sure you're on a Google Form page (`docs.google.com/forms/*`)
+4. Refresh the page and try again
+5. Consult the `TROUBLESHOOTING.md` file for more detailed solutions
+
+If problems persist, open an issue on the GitHub repository.
+
+## Project Structure
+
+```
+Form Genie/
+├── icons/                  # Extension icons
+├── src/
+│   ├── css/                # Stylesheets
+│   │   ├── options.css     # Settings page styles
+│   │   └── popup.css       # Popup styles
+│   ├── html/               # HTML files
+│   │   ├── options.html    # Settings page HTML
+│   │   └── popup.html      # Popup HTML
+│   └── js/                 # JavaScript files
+│       ├── background.js   # Background service worker
+│       ├── content.js      # Content script for form interaction
+│       ├── options.js      # Settings page logic
+│       └── popup.js        # Popup logic
+├── manifest.json           # Extension manifest
+├── README.md               # This file
+├── LICENSE                 # MIT License
+├── load_extension.html     # Detailed loading instructions
+├── verify_extension.js     # Verification script
+└── TROUBLESHOOTING.md      # Troubleshooting guide
+```
 
 ## Contributing
 
