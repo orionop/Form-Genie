@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Form Genie",
+  "version": "2.0",
+  "description": "Auto-fill Google Forms using AI (OpenAI).",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["*://docs.google.com/forms/*"],
+  "background": {
+    "service_worker": "src/js/background.js"
+  },
+  "action": { 
+    "default_popup": "src/html/popup.html",
+    "default_icon": {
+      "16": "icons/form.png",
+      "48": "icons/form.png",
+      "128": "icons/form.png"
+    }
+  },
+  "options_page": "src/html/options.html",
+  "icons": {
+    "16": "icons/form.png",
+    "48": "icons/form.png",
+    "128": "icons/form.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://docs.google.com/forms/*"],
+      "js": ["src/js/content.js"]
+    }
+  ]
+}

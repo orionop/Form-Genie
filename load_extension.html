@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Form Genie Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #ff8c00;
+        }
+        .step {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to Load Form Genie Extension</h1>
+    
+    <div class="step">
+        <h2>Step 1: Open Chrome Extensions Page</h2>
+        <p>Open Chrome and navigate to <code>chrome://extensions/</code> in the address bar.</p>
+    </div>
+    
+    <div class="step">
+        <h2>Step 2: Enable Developer Mode</h2>
+        <p>Toggle the "Developer mode" switch in the top-right corner of the page.</p>
+    </div>
+    
+    <div class="step">
+        <h2>Step 3: Load the Extension</h2>
+        <p>Click the "Load unpacked" button that appears after enabling Developer mode.</p>
+        <p>Navigate to the Form Genie directory and select it.</p>
+        <p><strong>Important:</strong> Make sure you select the directory that contains the <code>manifest.json</code> file.</p>
+    </div>
+    
+    <div class="step">
+        <h2>Step 4: Verify Installation</h2>
+        <p>The Form Genie extension should now appear in your list of extensions.</p>
+        <p>You should see the Form Genie icon in your Chrome toolbar.</p>
+    </div>
+    
+    <div class="note">
+        <h3>Troubleshooting</h3>
+        <p>If you see an error like "Manifest file is missing or unreadable":</p>
+        <ul>
+            <li>Make sure you're selecting the correct directory that contains the <code>manifest.json</code> file.</li>
+            <li>Check that the <code>manifest.json</code> file is not corrupted or empty.</li>
+            <li>Ensure that all the files referenced in the manifest exist in the correct locations.</li>
+        </ul>
+    </div>
+</body>
+</html> 
